@@ -62,7 +62,7 @@ function playRound(playerChoice, computerChoice) {
     return COMPUTER_WINS;
   }
 }
-function game() {
+/*function game() {
   let playerWins = 0;
   let computerWins = 0;
   let draws = 0;
@@ -81,4 +81,12 @@ function game() {
     return "Player Wins the game.";
   } else return "Its a Draw";
 }
-console.log(game());
+console.log(game());*/
+
+const button = document.querySelectorAll("button");
+
+button.forEach((element) => {
+  element.addEventListener("click", (event) => {
+    console.log(playRound(element.textContent, getComputerChoice()));
+  });
+});
